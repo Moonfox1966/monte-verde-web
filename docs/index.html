@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>CCTI Monte Verde | Centro de Ciencia, Tecnología e Innovación</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <script id="tailwind-config">
+              tailwind.config = {
+                darkMode: "class",
+                theme: {
+                  extend: {
+                    "colors": {
+                            "secondary-container": "#c5e4fa",
+                            "on-surface": "#1b1c1c",
+                            "on-primary-container": "#809787",
+                            "secondary-fixed": "#c8e7fd",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary-fixed-variant": "#6d3a00",
+                            "on-tertiary-container": "#c98140",
+                            "surface-container": "#efeded",
+                            "on-primary-fixed": "#0a2014",
+                            "on-primary-fixed-variant": "#364c3e",
+                            "secondary-fixed-dim": "#accbe0",
+                            "on-secondary-fixed-variant": "#2c4a5c",
+                            "surface": "#fbf9f9",
+                            "tertiary-fixed-dim": "#ffb77b",
+                            "primary-container": "#1a2f23",
+                            "on-error": "#ffffff",
+                            "inverse-on-surface": "#f2f0f0",
+                            "surface-container-lowest": "#ffffff",
+                            "on-tertiary": "#ffffff",
+                            "surface-tint": "#4d6355",
+                            "error": "#ba1a1a",
+                            "surface-bright": "#fbf9f9",
+                            "on-secondary-container": "#496679",
+                            "tertiary-fixed": "#ffdcc2",
+                            "on-error-container": "#93000a",
+                            "error-container": "#ffdad6",
+                            "primary-fixed-dim": "#b4ccbb",
+                            "on-tertiary-fixed": "#2e1500",
+                            "primary-fixed": "#d0e9d6",
+                            "outline": "#737973",
+                            "on-secondary-fixed": "#001e2d",
+                            "surface-container-low": "#f5f3f3",
+                            "surface-variant": "#e4e2e2",
+                            "primary": "#051a0f",
+                            "tertiary": "#271100",
+                            "surface-container-high": "#e9e8e7",
+                            "background": "#fbf9f9",
+                            "on-background": "#1b1c1c",
+                            "tertiary-container": "#442200",
+                            "surface-dim": "#dbdad9",
+                            "on-primary": "#ffffff",
+                            "on-surface-variant": "#424843",
+                            "outline-variant": "#c2c8c2",
+                            "secondary": "#446274",
+                            "inverse-primary": "#b4ccbb",
+                            "inverse-surface": "#303031",
+                            "surface-container-highest": "#e4e2e2"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                    },
+                    "spacing": {
+                            "container-max": "1280px",
+                            "margin-mobile": "20px",
+                            "gutter": "32px",
+                            "section-padding": "120px",
+                            "unit": "8px",
+                            "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                            "label-sm": ["Manrope"],
+                            "body-md": ["Manrope"],
+                            "display-xl": ["Noto Serif"],
+                            "headline-lg": ["Noto Serif"],
+                            "body-lg": ["Manrope"],
+                            "headline-md": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                            "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                            "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                            "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                            "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                  },
+                },
+              }
+            </script>
+
+        <style>
+                .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+                .misty-overlay { background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(251, 249, 249, 0.8) 100%); }
+                .hairline-border { border-width: 0.5px; }
+        </style>
+
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="js/main.js" defer></script>
+    </head>
+    <body class="bg-background text-on-surface font-body-md antialiased">
+        <header>
+            <!-- TopNavBar -->
+            <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl h-20 border-b border-gray-200/50 dark:border-white/10 shadow-sm dark:shadow-none">
+                <div class="font-serif text-xl font-bold tracking-tighter text-emerald-950 dark:text-white">CCTI Monte Verde</div>
+                <div class="hidden md:flex gap-12 items-center">
+                    <a class="text-emerald-950 dark:text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-amber-600 after:rounded-full hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#identidad">Identidad</a>
+                    <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#pilares">Pilares</a>
+                    <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#impacto">Impacto</a>
+                    <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#alianzas">Alianzas</a>
+                </div>
+                <button class="px-8 py-3 bg-primary text-on-primary font-label-sm uppercase tracking-widest hover:bg-on-tertiary-container transition-all duration-300">
+                            Conversemos
+                </button>
+            </nav>
+        </header>
+        <main>
+            <!-- Hero Section -->
+            <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+                <div class="absolute inset-0 z-0">
+                    <img class="w-full h-full object-cover grayscale-[0.3]" data-alt="A cinematic, low-angle shot of a dense, primordial Patagonian forest shrouded in morning mist. The lighting is ethereal and soft, with cool blue tones and deep forest greens creating a sense of ancient wisdom. A subtle atmospheric blur mimics the damp wetlands of Monte Verde, evoking an editorial and prestigious scientific atmosphere with high-contrast shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8NtHLeiUftOjOpJvfYIMUI-oRfVMwbPtmrCJRZ5CthJdg5Q8TUcb5MOTcgvn6DpJRL9zrUMm3VLknw2mSDp2Gm_U0nQgSy2pqfcVt5_KNeAMmLVryZaLJUh4xOAlYUiLHo9U66Qlvqn7nsq9dLtwg4hSG7NBJoyGd-o8rIBeaJV_MATt7ywJbsF2axGGfxrxCjpBBuKdZleuHmYC7UAk_G96S65G1KpBiNlp9xWn0gvYRhKUgd-eH_w0qBuWjLrqPIraYnSjOKhY"/>
+                    <div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"></div>
+                </div>
+                <div class="relative z-10 text-center max-w-5xl px-margin-mobile md:px-0">
+                    <p class="font-label-sm text-on-primary mb-8 tracking-[0.4em] uppercase opacity-80">Patrimonio y Vanguardia</p>
+                    <h1 class="font-display-xl text-white mb-12 leading-tight">Desde el origen del conocimiento, hacia el futuro del talento.</h1>
+                    <div class="w-px h-24 bg-on-tertiary-container mx-auto"></div>
+                </div>
+            </section>
+
+            <!-- Concepto Monte Verde -->
+            <section class="py-section-padding bg-background" id="identidad">
+                <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                    <div class="md:col-span-5">
+                        <p class="font-label-sm text-on-tertiary-container mb-4 uppercase">El Legado</p>
+                        <h2 class="font-headline-lg text-primary mb-8">Concepto Monte Verde</h2>
+                        <p class="font-body-lg text-on-surface-variant italic mb-6">"Aquí, donde la historia de América comenzó antes de lo imaginado."</p>
+                        <p class="font-body-md text-on-surface mb-8">Monte Verde no es solo un sitio arqueológico; es el testimonio de la capacidad humana de adaptación y descubrimiento. Inspirados por este hito, nuestro Centro se posiciona como el nuevo epicentro de evolución tecnológica en el sur de Chile.</p>
+                    </div>
+                    <div class="md:col-start-7 md:col-span-6">
+                        <div class="relative aspect-square">
+                            <img class="w-full h-full object-cover rounded-sm shadow-2xl" data-alt="Close-up architectural detail of a modern research facility made of local stone and glass, blending into a foggy Chilean landscape. The image uses a minimalist editorial style with clean lines and soft, natural lighting. The color palette consists of slate greys, deep forest greens, and translucent glass textures, signifying the intersection of heritage and innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_SLel7-AXtmTHauZtMtviMEbmfpKVN-4AIVI11mQMnj9VID7f6gEXgatc1Y5Em_soq5daSy1X7ur9tXUfc6j8I8ZHCINFhYpaYfmRsOeM8rfm5BqrCbywgUx24xVRUYUBj9xeZL9Y-ZhdscN5Sepm7E9QbxTsmF28HobrOH30mfTtKXKKUv9PF-NzoA0KfF8P_L2B5ys0UC6y5pnzf3HHPk42JvYhDE62fnZsg1txXnz_l8jzQSjp9NqXV604xxyAFMS8yQ3nbw"/>
+                            <div class="absolute -bottom-8 -left-8 bg-surface p-8 shadow-xl border border-outline-variant max-w-xs">
+                                <p class="font-body-md text-on-surface italic">Exploración continua de las capas del saber, desde el suelo orgánico hasta el código digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiénes somos -->
+            <section id="quienes-somos" class="py-section-padding bg-surface-container-low">
+                <div class="max-w-4xl mx-auto text-center px-12">
+                    <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">discover_tune</span>
+                    <h2 class="font-headline-md text-primary mb-10">Quiénes somos</h2>
+                    <p class="font-body-lg text-on-surface-variant leading-relaxed mb-12">
+                        El Centro de Ciencia, Tecnología e Innovación Monte Verde es una iniciativa orientada a identificar, formar y proyectar jóvenes con talento avanzado, articulando ciencia, tecnología, innovación, liderazgo y compromiso con el territorio.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant pt-12">
+                        <div>
+                            <h4 class="font-label-sm text-on-surface mb-2">Figura jurídica</h4>
+                            <p class="font-body-md text-on-surface-variant">Corporación</p>
+                        </div>
+                        <div>
+                            <h4 class="font-label-sm text-on-surface mb-2">Etapa inicial</h4>
+                            <p class="font-body-md text-on-surface-variant">Puerto Montt, 2026</p>
+                        </div>
+                        <div>
+                            <h4 class="font-label-sm text-on-surface mb-2">Proyección</h4>
+                            <p class="font-body-md text-on-surface-variant">Sur de Chile</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- El Problema -->
+            <section class="py-section-padding bg-primary text-on-primary">
+                <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                    <div>
+                        <h2 class="font-headline-lg mb-8">El Desafío del Talento Territorial</h2>
+                        <p class="font-body-lg opacity-80 mb-8">A pesar de poseer una riqueza humana excepcional, el sur de Chile enfrenta una brecha crítica en la retención y potenciación de sus mentes más brillantes. La falta de infraestructura de vanguardia y programas de alto rendimiento condena al talento a la migración o al subempleo de sus capacidades.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-on-tertiary-container">warning</span>
+                                <p class="font-body-md">Desconexión entre academia e industria local.</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-on-tertiary-container">warning</span>
+                                <p class="font-body-md">Fuga de capital intelectual hacia la zona central.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary-container p-12 border border-white/10 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <span class="material-symbols-outlined text-9xl">analytics</span>
+                        </div>
+                        <h3 class="font-headline-md mb-6">Nuestra Intervención</h3>
+                        <p class="font-body-md opacity-70 mb-10">Generamos un ecosistema de inmersión total donde el estudiante de alto potencial encuentra las herramientas, el mentor y el desafío necesario para transformar su entorno.</p>
+                        <button class="border border-on-tertiary-container text-on-tertiary-container px-8 py-4 font-label-sm hover:bg-on-tertiary-container hover:text-primary transition-all">ANALIZAR MODELO</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Misión y Visión -->
+            <section id="proposito" class="py-section-padding bg-background border-b border-surface-container">
+                <div class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row gap-24">
+                    <div class="flex-1">
+                        <p class="font-label-sm text-on-tertiary-container mb-6">Misión</p>
+                        <h3 class="font-display-xl text-primary text-5xl mb-8">Identificar y nutrir el genio local.</h3>
+                        <p class="font-body-lg text-on-surface-variant">Establecer una ruta de aprendizaje excepcional que conecte la curiosidad científica con el desarrollo económico sostenible.</p>
+                    </div>
+                    <div class="flex-1 pt-12 md:pt-24">
+                        <p class="font-label-sm text-on-tertiary-container mb-6">Visión</p>
+                        <h3 class="font-display-xl text-primary text-5xl mb-8">Ser el referente del hemisferio sur.</h3>
+                        <p class="font-body-lg text-on-surface-variant">Convertir a la región de Los Lagos en un polo de innovación global, reconocido por su excelencia humana y rigor científico.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- A quién va dirigido -->
+            <section id="programa" class="py-section-padding bg-surface">
+                <div class="max-w-7xl mx-auto px-12">
+                    <div class="text-center mb-20">
+                        <h2 class="font-headline-lg text-primary mb-4">El Perfil CCTI</h2>
+                        <p class="font-body-lg text-on-surface-variant">Buscamos estudiantes con hambre de futuro y mentes disruptivas.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="p-12 bg-white shadow-sm border border-outline-variant">
+                            <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6" data-weight="fill">school</span>
+                            <h4 class="font-headline-md text-2xl mb-4">Pre-grado de Excelencia</h4>
+                            <p class="font-body-md text-on-surface-variant">Estudiantes destacados que buscan profundizar más allá del currículo tradicional.</p>
+                        </div>
+                        <div class="p-12 bg-white shadow-sm border border-outline-variant scale-105 z-10 border-on-tertiary-container">
+                            <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6" data-weight="fill">biotech</span>
+                            <h4 class="font-headline-md text-2xl mb-4">Mentes Investigadoras</h4>
+                            <p class="font-body-md text-on-surface-variant">Jóvenes con inclinación natural por la resolución de problemas complejos y la experimentación.</p>
+                        </div>
+                        <div class="p-12 bg-white shadow-sm border border-outline-variant">
+                            <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6" data-weight="fill">lightbulb</span>
+                            <h4 class="font-headline-md text-2xl mb-4">Liderazgo Territorial</h4>
+                            <p class="font-body-md text-on-surface-variant">Aquellos con la visión de aplicar su conocimiento para impactar positivamente su región.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modelo Formativo -->
+            <section id="modelo-formativo" class="py-section-padding bg-surface-container-highest">
+                <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                    <div class="order-2 md:order-1">
+                        <img class="w-full aspect-video object-cover shadow-2xl" data-alt="A clean, clinical top-down view of a modern laboratory workspace featuring precision instruments, a high-end microscope, and an open digital tablet showing complex data visualizations. The lighting is bright and industrial-chic with cool neutral tones. The overall aesthetic is highly professional, editorial, and focused on technological precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3QsLMjR4GuXvUw78h11RxERFUBqRP9Dc66llk_oecbw89y5VUyzcoLSyKiZNvdkqaFbPtcg_D61HUGf4Zo4mR-ir9wh-9jSUz3WYydhp1Hs1TjZU7elvlO2_PFmLfjyXTTMzaRtNS6LnTYXP3CvBTTVFLtu9tDr3FUGG8xdOP9Dxh4D0H91jcaibYhYeC1PaCA6C_qnldP67dV9WI4ParByTSsJ6cd_jcDfzkp8JgyQljiqzkoJoXCue0A6TDDPCX9t_LUey77Oo"/>
+                    </div>
+                    <div class="order-1 md:order-2 pl-0 md:pl-24">
+                        <h2 class="font-headline-lg text-primary mb-8">Arquitectura del Aprendizaje</h2>
+                        <ul class="space-y-12 relative before:absolute before:left-3 before:top-4 before:bottom-4 before:w-px before:bg-outline-variant">
+                            <li class="relative pl-12">
+                                <span class="absolute left-0 top-0 w-6 h-6 bg-on-tertiary-container rounded-full border-4 border-surface-container-highest"></span>
+                                <h5 class="font-label-sm uppercase mb-2">Fase 01: Inmersión Crítica</h5>
+                                <p class="font-body-md text-on-surface-variant">Desaprendizaje de paradigmas y fundamentos de ciencia aplicada.</p>
+                            </li>
+                            <li class="relative pl-12">
+                                <span class="absolute left-0 top-0 w-6 h-6 bg-on-tertiary-container rounded-full border-4 border-surface-container-highest"></span>
+                                <h5 class="font-label-sm uppercase mb-2">Fase 02: Experimentación Tecnológica</h5>
+                                <p class="font-body-md text-on-surface-variant">Uso de laboratorios de última generación para prototipado real.</p>
+                            </li>
+                            <li class="relative pl-12">
+                                <span class="absolute left-0 top-0 w-6 h-6 bg-on-tertiary-container rounded-full border-4 border-surface-container-highest"></span>
+                                <h5 class="font-label-sm uppercase mb-2">Fase 03: Escalado e Impacto</h5>
+                                <p class="font-body-md text-on-surface-variant">Conexión con redes globales y transferencia tecnológica al medio.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Los 6 Pilares -->
+            <section class="py-section-padding bg-background" id="pilares">
+                <div class="max-w-7xl mx-auto px-12">
+                    <div class="flex justify-between items-end mb-24">
+                        <div class="max-w-2xl">
+                            <p class="font-label-sm text-on-tertiary-container mb-4">Estructura Curricular</p>
+                            <h2 class="font-headline-lg text-primary">Pilares de Excelencia</h2>
+                        </div>
+                        <div class="hidden md:block">
+                            <span class="font-body-md text-on-surface-variant italic">Seis dimensiones del conocimiento integral.</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant border border-outline-variant">
+                        <!-- Pillar 1 -->
+                        <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                            <h3 class="font-headline-md text-primary group-hover:text-white mb-6">01. Ciencia</h3>
+                            <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Investigación pura como base de toda transformación tecnológica.</p>
+                            <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-tertiary-container">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 2 -->
+                        <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                            <h3 class="font-headline-md text-primary group-hover:text-white mb-6">02. Tecnología</h3>
+                            <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Herramientas digitales avanzadas, IA y computación de alto rendimiento.</p>
+                            <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-tertiary-container">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 3 -->
+                        <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                            <h3 class="font-headline-md text-primary group-hover:text-white mb-6">03. Innovación</h3>
+                            <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Metodologías disruptivas para la creación de soluciones inéditas.</p>
+                            <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-tertiary-container">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 4 -->
+                        <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                            <h3 class="font-headline-md text-primary group-hover:text-white mb-6">04. Liderazgo</h3>
+                            <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Gestión de equipos multidisciplinarios y visión estratégica.</p>
+                            <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-tertiary-container">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 5 -->
+                        <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                            <h3 class="font-headline-md text-primary group-hover:text-white mb-6">05. Ética</h3>
+                            <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Responsabilidad humana ante el avance exponencial del saber.</p>
+                            <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-tertiary-container">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 6 -->
+                        <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                            <h3 class="font-headline-md text-primary group-hover:text-white mb-6">06. Propósito</h3>
+                            <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Anclaje territorial y pertinencia cultural en cada proyecto.</p>
+                            <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-tertiary-container">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impacto Esperado -->
+            <section class="py-section-padding bg-surface-container-low overflow-hidden relative" id="impacto">
+                <div class="absolute right-0 top-0 h-full w-1/3 bg-on-tertiary-container/5 -skew-x-12 transform translate-x-20"></div>
+                <div class="max-w-7xl mx-auto px-12 relative z-10">
+                    <h2 class="font-headline-lg text-primary mb-20">Proyección y Trascendencia</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                        <div class="border-l border-on-tertiary-container pl-8">
+                            <span class="font-display-xl text-6xl text-primary block mb-4">+150</span>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Talentos Potenciados Anualmente</p>
+                        </div>
+                        <div class="border-l border-on-tertiary-container pl-8">
+                            <span class="font-display-xl text-6xl text-primary block mb-4">25</span>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Patentes de Innovación Local</p>
+                        </div>
+                        <div class="border-l border-on-tertiary-container pl-8">
+                            <span class="font-display-xl text-6xl text-primary block mb-4">12</span>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Convenios Internacionales</p>
+                        </div>
+                            <div class="border-l border-on-tertiary-container pl-8">
+                            <span class="font-display-xl text-6xl text-primary block mb-4">100%</span>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Pertinencia Territorial</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aliados -->
+            <section class="py-24 bg-white" id="alianzas">
+                <div class="max-w-7xl mx-auto px-12">
+                    <p class="font-label-sm text-center mb-16 tracking-widest text-on-surface-variant">RED DE COLABORACIÓN ESTRATÉGICA</p>
+                    <div class="flex flex-wrap justify-center gap-24 grayscale opacity-60">
+                        <span class="font-serif text-2xl font-bold">UNESCO</span>
+                        <span class="font-serif text-2xl font-bold">MIT MEDIA LAB</span>
+                        <span class="font-serif text-2xl font-bold">GOBIERNO REGIONAL</span>
+                        <span class="font-serif text-2xl font-bold">SENCE</span>
+                        <span class="font-serif text-2xl font-bold">UNIVERSIDAD AUSTRAL</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Final CTA -->
+            <section class="py-section-padding bg-primary relative overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img class="w-full h-full object-cover opacity-30" data-alt="An abstract representation of global neural networks and fiber optic cables glowing in a deep petroleum blue space. The image features soft light leaks and misty atmospheric effects that reflect a futuristic and sophisticated technological vision. High-end editorial photography style with extreme focus on light textures and deep shadow depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApwre5Ck2OU3KX6EqRoWsUvZ1IKeOZE7ImvA7XFEZbS44ebVeU0RQny9jhVqaNqByL1goSmq31DTYfp811Tk36O6BMWeqsZtR8GMm1g4xJyFRT94JxVTb0F6EUD2zxN1q-k7Dbiurt5JFPPQYGQH6b94X9-eB48KvPH3t5jbmpQNPbyFIY9TEgYMRJ47XCBXLGcs4NIbLrHODi5j-TAbGOJt1ZfS3rdw-H8n8jkvCjZv_iy0k77c0FuMSWdT9MSGPnguO0X2H7_J4"/>
+                </div>
+                <div class="relative z-10 max-w-4xl mx-auto text-center px-12">
+                    <h2 class="font-display-xl text-white mb-12">Conectemos con el futuro del talento.</h2>
+                    <p class="font-body-lg text-on-primary opacity-80 mb-12">Invitamos a instituciones, empresas y mentes brillantes a ser parte de esta transformación histórica.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <button class="bg-on-tertiary-container text-primary px-12 py-5 font-label-sm uppercase tracking-widest hover:bg-white transition-all">POSTULAR AL CENTRO</button>
+                        <button class="border border-white text-white px-12 py-5 font-label-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all">MÁS INFORMACIÓN</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-emerald-950 dark:bg-black text-gray-50 dark:text-gray-300 py-24 px-12 border-t border-white/5">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-7xl mx-auto">
+                <div class="md:col-span-4">
+                    <div class="font-serif text-2xl text-white mb-8">CCTI Monte Verde</div>
+                    <p class="font-sans text-sm tracking-wide leading-relaxed text-gray-400">© 2024 Centro de Ciencia, Tecnología e Innovación Monte Verde. Scientific Excellence and Heritage.</p>
+                </div>
+                <div class="md:col-span-2 md:col-start-6">
+                    <h5 class="font-label-sm text-white mb-6 uppercase">Legal</h5>
+                    <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#">Privacidad Institucional</a></li>
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#">Terminos</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h5 class="font-label-sm text-white mb-6 uppercase">Framework</h5>
+                    <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#">Marco ético</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h5 class="font-label-sm text-white mb-6 uppercase">Network</h5>
+                    <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

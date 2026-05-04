@@ -1,0 +1,266 @@
+/* =========================
+   Base general
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Compensa la altura del menú fijo al navegar con anclas */
+section[id] {
+    scroll-margin-top: 96px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+button {
+    transition: all 0.25s ease;
+}
+
+:focus-visible {
+    outline: 2px solid #c98140;
+    outline-offset: 3px;
+}
+
+/* =========================
+   Navegación
+   ========================= */
+
+header nav {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+/* Marca visual sutil para enlace activo si luego lo usas con JS */
+.nav-link-active {
+    color: #c98140 !important;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+#inicio h1 {
+    text-wrap: balance;
+}
+
+#inicio p {
+    text-wrap: pretty;
+}
+
+/* Oscurece un poco más el fondo si el texto del hero pierde contraste */
+#inicio .hero-overlay-soft {
+    background: linear-gradient(to bottom, rgba(5, 26, 15, 0.18), rgba(5, 26, 15, 0.42));
+}
+
+/* =========================
+   Contenido / legibilidad
+   ========================= */
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.max-readable {
+    max-width: 72ch;
+}
+
+/* Mejora cajas superpuestas sobre imágenes */
+.floating-card {
+    box-shadow: 0 18px 50px rgba(5, 26, 15, 0.10);
+}
+
+/* =========================
+   Secciones
+   ========================= */
+
+/* Evita que el contenido se vea demasiado apretado en pantallas medianas */
+.section-narrow {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Línea editorial sutil para subtítulos */
+.section-kicker {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 1024px) {
+    #inicio {
+        min-height: 88vh;
+        height: auto;
+        padding-top: 7rem;
+        padding-bottom: 5rem;
+    }
+
+    #inicio h1 {
+        font-size: 56px !important;
+        line-height: 1.1 !important;
+    }
+
+    .py-section-padding {
+        padding-top: 96px !important;
+        padding-bottom: 96px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header nav {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        height: 72px !important;
+    }
+
+    section[id] {
+        scroll-margin-top: 84px;
+    }
+
+    #inicio {
+        min-height: 82vh;
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+
+    #inicio h1 {
+        font-size: 38px !important;
+        line-height: 1.12 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    #inicio p.font-body-lg {
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .py-section-padding {
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+    }
+
+    .font-headline-lg {
+        font-size: 34px !important;
+        line-height: 1.2 !important;
+    }
+
+    .font-headline-md {
+        font-size: 28px !important;
+        line-height: 1.25 !important;
+    }
+
+    .font-display-xl {
+        font-size: 38px !important;
+        line-height: 1.12 !important;
+    }
+
+    .px-12 {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    .gap-24 {
+        gap: 3rem !important;
+    }
+
+    .gap-12 {
+        gap: 2rem !important;
+    }
+
+    .max-w-4xl,
+    .max-w-5xl,
+    .max-w-7xl {
+        width: 100%;
+    }
+
+    /* Ajusta tarjeta superpuesta de la sección identidad */
+    #identidad .absolute.-bottom-8 {
+        position: relative !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    /* Evita que la tarjeta central se agrande demasiado en móvil */
+    #programa .scale-105 {
+        transform: none !important;
+    }
+
+    /* Impacto: separa mejor métricas */
+    #impacto .border-l {
+        border-left-width: 2px;
+        padding-left: 1rem !important;
+    }
+
+    /* CTA final */
+    #contacto .font-display-xl {
+        font-size: 34px !important;
+        line-height: 1.15 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #inicio h1 {
+        font-size: 32px !important;
+    }
+
+    .font-headline-lg {
+        font-size: 30px !important;
+    }
+
+    .font-headline-md {
+        font-size: 24px !important;
+    }
+
+    .py-section-padding {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .px-12 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

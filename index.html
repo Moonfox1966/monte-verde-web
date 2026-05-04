@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro de Ciencia, Tecnología e Innovación Monte Verde</title>
+    <meta name="description" content="Sitio institucional del Centro de Ciencia, Tecnología e Innovación Monte Verde, iniciativa orientada al desarrollo de talento avanzado en Puerto Montt y el sur de Chile." />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#c5e4fa",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-container": "#809787",
+                        "secondary-fixed": "#c8e7fd",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6d3a00",
+                        "on-tertiary-container": "#c98140",
+                        "surface-container": "#efeded",
+                        "on-primary-fixed": "#0a2014",
+                        "on-primary-fixed-variant": "#364c3e",
+                        "secondary-fixed-dim": "#accbe0",
+                        "on-secondary-fixed-variant": "#2c4a5c",
+                        "surface": "#fbf9f9",
+                        "tertiary-fixed-dim": "#ffb77b",
+                        "primary-container": "#1a2f23",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#4d6355",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fbf9f9",
+                        "on-secondary-container": "#496679",
+                        "tertiary-fixed": "#ffdcc2",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b4ccbb",
+                        "on-tertiary-fixed": "#2e1500",
+                        "primary-fixed": "#d0e9d6",
+                        "outline": "#737973",
+                        "on-secondary-fixed": "#001e2d",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-variant": "#e4e2e2",
+                        "primary": "#051a0f",
+                        "tertiary": "#271100",
+                        "surface-container-high": "#e9e8e7",
+                        "background": "#fbf9f9",
+                        "on-background": "#1b1c1c",
+                        "tertiary-container": "#442200",
+                        "surface-dim": "#dbdad9",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#424843",
+                        "outline-variant": "#c2c8c2",
+                        "secondary": "#446274",
+                        "inverse-primary": "#b4ccbb",
+                        "inverse-surface": "#303031",
+                        "surface-container-highest": "#e4e2e2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "section-padding": "120px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "display-xl": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Noto Serif"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-xl": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .misty-overlay {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(251, 249, 249, 0.8) 100%);
+        }
+        .hairline-border {
+            border-width: 0.5px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md antialiased">
+
+    <!-- Encabezado / navegación -->
+    <header>
+        <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl h-20 border-b border-gray-200/50 dark:border-white/10 shadow-sm dark:shadow-none">
+            <a href="#inicio" class="font-serif text-lg md:text-xl font-bold tracking-tighter text-emerald-950 dark:text-white">
+                Centro Monte Verde
+            </a>
+
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="text-emerald-950 dark:text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-amber-600 after:rounded-full hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#identidad">Identidad</a>
+                <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#quienes-somos">Quiénes somos</a>
+                <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#programa">Programa</a>
+                <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#pilares">Pilares</a>
+                <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#impacto">Impacto</a>
+                <a class="text-gray-600 dark:text-gray-400 font-sans text-xs uppercase tracking-[0.2em] hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300" href="#alianzas">Alianzas</a>
+            </div>
+
+            <a href="#contacto" class="px-6 md:px-8 py-3 bg-primary text-on-primary font-label-sm uppercase tracking-widest hover:bg-on-tertiary-container transition-all duration-300">
+                Conversemos
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Inicio / hero -->
+        <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+            <div class="absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover grayscale-[0.3]"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8NtHLeiUftOjOpJvfYIMUI-oRfVMwbPtmrCJRZ5CthJdg5Q8TUcb5MOTcgvn6DpJRL9zrUMm3VLknw2mSDp2Gm_U0nQgSy2pqfcVt5_KNeAMmLVryZaLJUh4xOAlYUiLHo9U66Qlvqn7nsq9dLtwg4hSG7NBJoyGd-o8rIBeaJV_MATt7ywJbsF2axGGfxrxCjpBBuKdZleuHmYC7UAk_G96S65G1KpBiNlp9xWn0gvYRhKUgd-eH_w0qBuWjLrqPIraYnSjOKhY"
+                    alt="Bosque húmedo del sur de Chile con atmósfera brumosa y cinematográfica."
+                />
+                <div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background"></div>
+            </div>
+
+            <div class="relative z-10 text-center max-w-5xl px-margin-mobile md:px-0">
+                <p class="font-label-sm text-on-primary mb-8 tracking-[0.4em] uppercase opacity-80">Patrimonio y Vanguardia</p>
+                <h1 class="font-display-xl text-white mb-8 leading-tight">
+                    Centro de Ciencia, Tecnología e Innovación Monte Verde
+                </h1>
+                <p class="font-body-lg text-white/90 max-w-3xl mx-auto mb-12">
+                    Desde Puerto Montt, una iniciativa orientada a descubrir y desarrollar talento avanzado a través de ciencia, tecnología, innovación, liderazgo y compromiso con el futuro del territorio.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6">
+                    <a href="#identidad" class="bg-on-tertiary-container text-primary px-10 py-4 font-label-sm uppercase tracking-widest hover:bg-white transition-all">
+                        Conocer el proyecto
+                    </a>
+                    <a href="#alianzas" class="border border-white text-white px-10 py-4 font-label-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all">
+                        Sumarse como aliado
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Identidad Monte Verde -->
+        <section id="identidad" class="py-section-padding bg-background">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5">
+                    <p class="font-label-sm text-on-tertiary-container mb-4 uppercase">El Legado</p>
+                    <h2 class="font-headline-lg text-primary mb-8">Concepto Monte Verde</h2>
+                    <p class="font-body-lg text-on-surface-variant italic mb-6">
+                        “Monte Verde nos recuerda que este territorio ya fue escenario de una expresión extraordinaria de inteligencia humana.”
+                    </p>
+                    <p class="font-body-md text-on-surface mb-6">
+                        Monte Verde no es solo una referencia patrimonial. Es un símbolo territorial de observación, adaptación, descubrimiento y conocimiento. Inspirados en ese legado, proponemos una plataforma formativa que conecte ciencia, tecnología e innovación con una nueva generación de jóvenes capaces de comprender, crear y liderar el futuro.
+                    </p>
+                    <p class="font-body-md text-on-surface">
+                        Hoy queremos que este territorio vuelva a ser reconocido por su capacidad de formar inteligencia aplicada, pensamiento riguroso y visión de largo plazo.
+                    </p>
+                </div>
+
+                <div class="md:col-start-7 md:col-span-6">
+                    <div class="relative aspect-square">
+                        <img
+                            class="w-full h-full object-cover rounded-sm shadow-2xl"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_SLel7-AXtmTHauZtMtviMEbmfpKVN-4AIVI11mQMnj9VID7f6gEXgatc1Y5Em_soq5daSy1X7ur9tXUfc6j8I8ZHCINFhYpaYfmRsOeM8rfm5BqrCbywgUx24xVRUYUBj9xeZL9Y-ZhdscN5Sepm7E9QbxTsmF28HobrOH30mfTtKXKKUv9PF-NzoA0KfF8P_L2B5ys0UC6y5pnzf3HHPk42JvYhDE62fnZsg1txXnz_l8jzQSjp9NqXV604xxyAFMS8yQ3nbw"
+                            alt="Arquitectura contemporánea que une materialidad territorial e innovación."
+                        />
+                        <div class="absolute -bottom-8 -left-2 md:-left-8 bg-surface p-6 md:p-8 shadow-xl border border-outline-variant max-w-xs">
+                            <p class="font-body-md text-on-surface italic">
+                                Exploración continua de las capas del saber, desde el suelo orgánico hasta el código digital.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiénes somos -->
+        <section id="quienes-somos" class="py-section-padding bg-surface-container-low">
+            <div class="max-w-4xl mx-auto text-center px-6 md:px-12">
+                <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">discover_tune</span>
+                <h2 class="font-headline-md text-primary mb-10">Quiénes somos</h2>
+                <p class="font-body-lg text-on-surface-variant leading-relaxed mb-12">
+                    El Centro de Ciencia, Tecnología e Innovación Monte Verde es una iniciativa orientada a identificar, formar y proyectar jóvenes con talento avanzado, articulando ciencia, tecnología, innovación, liderazgo, ética y compromiso con el territorio. Su propósito es ofrecer una experiencia de excelencia que conecte el potencial de las nuevas generaciones con los desafíos del presente y del futuro.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant pt-12">
+                    <div>
+                        <h4 class="font-label-sm text-on-surface mb-2">Figura jurídica</h4>
+                        <p class="font-body-md text-on-surface-variant">Corporación</p>
+                    </div>
+                    <div>
+                        <h4 class="font-label-sm text-on-surface mb-2">Etapa inicial</h4>
+                        <p class="font-body-md text-on-surface-variant">Puerto Montt, 2026</p>
+                    </div>
+                    <div>
+                        <h4 class="font-label-sm text-on-surface mb-2">Proyección</h4>
+                        <p class="font-body-md text-on-surface-variant">Sur de Chile</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problema -->
+        <section id="problema" class="py-section-padding bg-primary text-on-primary">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+                <div>
+                    <h2 class="font-headline-lg mb-8">El desafío del talento territorial</h2>
+                    <p class="font-body-lg opacity-80 mb-8">
+                        A pesar de contar con jóvenes de enorme potencial, el sur de Chile enfrenta una brecha persistente en la identificación, desarrollo y proyección temprana del talento avanzado. La educación tradicional no siempre ofrece los niveles de profundidad, exigencia y acompañamiento que estas trayectorias requieren.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-tertiary-container">warning</span>
+                            <p class="font-body-md">Insuficiente desarrollo de capital humano avanzado desde etapas escolares.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-tertiary-container">warning</span>
+                            <p class="font-body-md">Desconexión entre potencial juvenil, ciencia, tecnología e impacto territorial.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-tertiary-container">warning</span>
+                            <p class="font-body-md">Pérdida de oportunidades para el futuro productivo, institucional y social de la región.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-primary-container p-10 md:p-12 border border-white/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-9xl">analytics</span>
+                    </div>
+                    <h3 class="font-headline-md mb-6">Nuestra respuesta</h3>
+                    <p class="font-body-md opacity-80 mb-10">
+                        Proponemos una experiencia formativa avanzada, presencial y de largo plazo, donde estudiantes con talento avanzado encuentren desafío intelectual, acompañamiento humano, conexión con problemas reales y una ruta de crecimiento desde 1° a 4° medio.
+                    </p>
+                    <a href="#programa" class="inline-block border border-on-tertiary-container text-on-tertiary-container px-8 py-4 font-label-sm hover:bg-on-tertiary-container hover:text-primary transition-all">
+                        Ver programa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Propósito institucional -->
+        <section id="proposito" class="py-section-padding bg-background border-b border-surface-container">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div>
+                    <p class="font-label-sm text-on-tertiary-container mb-6">Propósito</p>
+                    <h2 class="font-headline-md text-primary mb-6">Desarrollar talento avanzado con impacto territorial</h2>
+                    <p class="font-body-lg text-on-surface-variant">
+                        Identificar y desarrollar jóvenes con talento avanzado de Puerto Montt, fortaleciendo su potencial en ciencia, tecnología, innovación, liderazgo y desarrollo humano.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-label-sm text-on-tertiary-container mb-6">Misión</p>
+                    <h3 class="font-headline-md text-primary mb-6">Formar con excelencia y propósito</h3>
+                    <p class="font-body-lg text-on-surface-variant">
+                        Descubrir, formar y acompañar a estudiantes mediante una experiencia de excelencia que combine ciencia, tecnología, innovación, pensamiento avanzado, habilidades humanas, ética y conexión con desafíos reales del entorno.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-label-sm text-on-tertiary-container mb-6">Visión</p>
+                    <h3 class="font-headline-md text-primary mb-6">Proyectar a Puerto Montt como referente del sur</h3>
+                    <p class="font-body-lg text-on-surface-variant">
+                        Impulsar desde Puerto Montt una nueva generación de jóvenes capaces de comprender, crear, innovar y liderar con impacto en la sociedad, la economía, la ciencia y las instituciones del futuro.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programa -->
+        <section id="programa" class="py-section-padding bg-surface">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-20">
+                    <h2 class="font-headline-lg text-primary mb-4">A quién va dirigido</h2>
+                    <p class="font-body-lg text-on-surface-variant max-w-3xl mx-auto">
+                        El programa está orientado a estudiantes con talento avanzado que requieran mayor profundidad, desafío y proyección que la habitualmente disponible en trayectorias escolares tradicionales.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="p-12 bg-white shadow-sm border border-outline-variant">
+                        <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">school</span>
+                        <h4 class="font-headline-md text-2xl mb-4">Ingreso desde 1° medio</h4>
+                        <p class="font-body-md text-on-surface-variant">
+                            Una cohorte inicial de estudiantes que inicia su trayectoria en el programa desde enseñanza media.
+                        </p>
+                    </div>
+
+                    <div class="p-12 bg-white shadow-sm border border-on-tertiary-container scale-105 z-10">
+                        <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">biotech</span>
+                        <h4 class="font-headline-md text-2xl mb-4">Trayectoria hasta 4° medio</h4>
+                        <p class="font-body-md text-on-surface-variant">
+                            Un acompañamiento sostenido de largo plazo, con profundidad progresiva, identidad de grupo y formación avanzada.
+                        </p>
+                    </div>
+
+                    <div class="p-12 bg-white shadow-sm border border-outline-variant">
+                        <span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">lightbulb</span>
+                        <h4 class="font-headline-md text-2xl mb-4">Academia de sábados</h4>
+                        <p class="font-body-md text-on-surface-variant">
+                            Modalidad presencial, con foco inicial en Puerto Montt y desarrollo formativo complementario de alta exigencia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modelo formativo -->
+        <section id="modelo-formativo" class="py-section-padding bg-surface-container-highest">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                <div class="order-2 md:order-1">
+                    <img
+                        class="w-full aspect-video object-cover shadow-2xl"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3QsLMjR4GuXvUw78h11RxERFUBqRP9Dc66llk_oecbw89y5VUyzcoLSyKiZNvdkqaFbPtcg_D61HUGf4Zo4mR-ir9wh-9jSUz3WYydhp1Hs1TjZU7elvlO2_PFmLfjyXTTMzaRtNS6LnTYXP3CvBTTVFLtu9tDr3FUGG8xdOP9Dxh4D0H91jcaibYhYeC1PaCA6C_qnldP67dV9WI4ParByTSsJ6cd_jcDfzkp8JgyQljiqzkoJoXCue0A6TDDPCX9t_LUey77Oo"
+                        alt="Espacio de trabajo orientado a ciencia, análisis y desarrollo tecnológico."
+                    />
+                </div>
+
+                <div class="order-1 md:order-2 pl-0 md:pl-24">
+                    <h2 class="font-headline-lg text-primary mb-8">Modelo formativo</h2>
+                    <p class="font-body-lg text-on-surface-variant mb-10">
+                        No se trata de refuerzo escolar ni de una academia tradicional. Es una experiencia avanzada basada en pensamiento riguroso, exploración, tecnología aplicada, innovación, liderazgo, ética y conexión con desafíos reales.
+                    </p>
+
+                    <ul class="space-y-12 relative before:absolute before:left-3 before:top-4 before:bottom-4 before:w-px before:bg-outline-variant">
+                        <li class="relative pl-12">
+                            <span class="absolute left-0 top-0 w-6 h-6 bg-on-tertiary-container rounded-full border-4 border-surface-container-highest"></span>
+                            <h5 class="font-label-sm uppercase mb-2">Fase 01: Exploración y fundamentos</h5>
+                            <p class="font-body-md text-on-surface-variant">Desarrollo de pensamiento científico, observación, método y comprensión del entorno.</p>
+                        </li>
+                        <li class="relative pl-12">
+                            <span class="absolute left-0 top-0 w-6 h-6 bg-on-tertiary-container rounded-full border-4 border-surface-container-highest"></span>
+                            <h5 class="font-label-sm uppercase mb-2">Fase 02: Creación y experimentación</h5>
+                            <p class="font-body-md text-on-surface-variant">Aplicación de programación, robótica, automatización y proyectos interdisciplinarios.</p>
+                        </li>
+                        <li class="relative pl-12">
+                            <span class="absolute left-0 top-0 w-6 h-6 bg-on-tertiary-container rounded-full border-4 border-surface-container-highest"></span>
+                            <h5 class="font-label-sm uppercase mb-2">Fase 03: Impacto y proyección</h5>
+                            <p class="font-body-md text-on-surface-variant">Conexión con territorio, liderazgo, propósito y desafíos del futuro.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilares -->
+        <section id="pilares" class="py-section-padding bg-background">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex justify-between items-end mb-24">
+                    <div class="max-w-2xl">
+                        <p class="font-label-sm text-on-tertiary-container mb-4">Estructura curricular</p>
+                        <h2 class="font-headline-lg text-primary">Seis pilares de desarrollo</h2>
+                    </div>
+                    <div class="hidden md:block">
+                        <span class="font-body-md text-on-surface-variant italic">Una propuesta integral para formar talento avanzado.</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant border border-outline-variant">
+                    <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                        <h3 class="font-headline-md text-primary group-hover:text-white mb-6">01. Ciencia y comprensión avanzada</h3>
+                        <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Astronomía, física, matemática avanzada, método científico y pensamiento sistémico.</p>
+                    </div>
+
+                    <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                        <h3 class="font-headline-md text-primary group-hover:text-white mb-6">02. Tecnología y creación aplicada</h3>
+                        <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Programación Python, robótica, domótica, automatización y desarrollo de soluciones.</p>
+                    </div>
+
+                    <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                        <h3 class="font-headline-md text-primary group-hover:text-white mb-6">03. Innovación y futuro</h3>
+                        <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Inteligencia artificial, computación cuántica, nanotecnología y ética de la innovación.</p>
+                    </div>
+
+                    <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                        <h3 class="font-headline-md text-primary group-hover:text-white mb-6">04. Territorio y gobierno digital</h3>
+                        <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Smart City, ciudadanía digital, datos y soluciones tecnológicas para la comunidad.</p>
+                    </div>
+
+                    <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                        <h3 class="font-headline-md text-primary group-hover:text-white mb-6">05. Capital humano avanzado</h3>
+                        <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Comunicación, liderazgo, resolución de conflictos, ética, ciudadanía y responsabilidad pública.</p>
+                    </div>
+
+                    <div class="bg-white p-12 hover:bg-primary group transition-colors duration-500">
+                        <h3 class="font-headline-md text-primary group-hover:text-white mb-6">06. Competitividad e impacto productivo</h3>
+                        <p class="font-body-md text-on-surface-variant group-hover:text-on-primary-container">Economía, innovación industrial, productividad, emprendimiento y desafíos reales del territorio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impacto -->
+        <section id="impacto" class="py-section-padding bg-surface-container-low overflow-hidden relative">
+            <div class="absolute right-0 top-0 h-full w-1/3 bg-on-tertiary-container/5 -skew-x-12 transform translate-x-20"></div>
+            <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+                <h2 class="font-headline-lg text-primary mb-20">Impacto esperado</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="border-l border-on-tertiary-container pl-8">
+                        <span class="font-display-xl text-6xl text-primary block mb-4">25</span>
+                        <p class="font-label-sm uppercase text-on-surface-variant">Estudiantes en cohorte piloto</p>
+                    </div>
+                    <div class="border-l border-on-tertiary-container pl-8">
+                        <span class="font-display-xl text-6xl text-primary block mb-4">1</span>
+                        <p class="font-label-sm uppercase text-on-surface-variant">Cohorte inicial 2026</p>
+                    </div>
+                    <div class="border-l border-on-tertiary-container pl-8">
+                        <span class="font-display-xl text-6xl text-primary block mb-4">4</span>
+                        <p class="font-label-sm uppercase text-on-surface-variant">Años de trayectoria formativa</p>
+                    </div>
+                    <div class="border-l border-on-tertiary-container pl-8">
+                        <span class="font-display-xl text-6xl text-primary block mb-4">100%</span>
+                        <p class="font-label-sm uppercase text-on-surface-variant">Vinculación con el territorio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alianzas -->
+        <section id="alianzas" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <p class="font-label-sm text-center mb-16 tracking-widest text-on-surface-variant">RED DE COLABORACIÓN ESTRATÉGICA</p>
+
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="font-headline-lg text-primary mb-6">Aliados estratégicos</h2>
+                    <p class="font-body-lg text-on-surface-variant">
+                        El desarrollo del talento avanzado no debe ser una excepción. Debe transformarse en una prioridad estratégica para el futuro del territorio.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-12 md:gap-24 grayscale opacity-60">
+                    <span class="font-serif text-2xl font-bold">RED COLEGIOS PATAGONIA</span>
+                    <span class="font-serif text-2xl font-bold">IM PUERTO MONTT</span>
+                    <span class="font-serif text-2xl font-bold">PLAN INNOVA</span>
+                    <span class="font-serif text-2xl font-bold">DATAGROUP CHILE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto / CTA final -->
+        <section id="contacto" class="py-section-padding bg-primary relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover opacity-30"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApwre5Ck2OU3KX6EqRoWsUvZ1IKeOZE7ImvA7XFEZbS44ebVeU0RQny9jhVqaNqByL1goSmq31DTYfp811Tk36O6BMWeqsZtR8GMm1g4xJyFRT94JxVTb0F6EUD2zxN1q-k7Dbiurt5JFPPQYGQH6b94X9-eB48KvPH3t5jbmpQNPbyFIY9TEgYMRJ47XCBXLGcs4NIbLrHODi5j-TAbGOJt1ZfS3rdw-H8n8jkvCjZv_iy0k77c0FuMSWdT9MSGPnguO0X2H7_J4"
+                    alt="Visual abstracto de redes y conectividad asociado a futuro e innovación."
+                />
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-6 md:px-12">
+                <h2 class="font-display-xl text-white mb-12">Puerto Montt puede volver a ser territorio de inteligencia extraordinaria.</h2>
+                <p class="font-body-lg text-on-primary opacity-80 mb-12">
+                    Invitamos a instituciones, empresas, mundo académico y aliados estratégicos a ser parte de una iniciativa que busca descubrir, formar y proyectar talento avanzado desde el sur de Chile.
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center gap-6 mb-14">
+                    <a href="mailto:contacto@centromonteverde.cl" class="bg-on-tertiary-container text-primary px-12 py-5 font-label-sm uppercase tracking-widest hover:bg-white transition-all">
+                        Escribir correo
+                    </a>
+                    <a href="#inicio" class="border border-white text-white px-12 py-5 font-label-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all">
+                        Volver al inicio
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left md:text-center">
+                    <div>
+                        <p class="font-label-sm text-white/70 mb-2 uppercase">Correo</p>
+                        <p class="font-body-md text-white">contacto@centromonteverde.cl</p>
+                    </div>
+                    <div>
+                        <p class="font-label-sm text-white/70 mb-2 uppercase">Ubicación</p>
+                        <p class="font-body-md text-white">Puerto Montt, Chile</p>
+                    </div>
+                    <div>
+                        <p class="font-label-sm text-white/70 mb-2 uppercase">Modalidad inicial</p>
+                        <p class="font-body-md text-white">Presencial · Academia de sábados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-emerald-950 dark:bg-black text-gray-50 dark:text-gray-300 py-24 px-6 md:px-12 border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-7xl mx-auto">
+            <div class="md:col-span-4">
+                <div class="font-serif text-2xl text-white mb-8">Centro Monte Verde</div>
+                <p class="font-sans text-sm tracking-wide leading-relaxed text-gray-400">
+                    © 2026 Centro de Ciencia, Tecnología e Innovación Monte Verde. Puerto Montt, Chile.
+                </p>
+            </div>
+
+            <div class="md:col-span-2 md:col-start-6">
+                <h5 class="font-label-sm text-white mb-6 uppercase">Institucional</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#quienes-somos">Quiénes somos</a></li>
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#proposito">Propósito</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <h5 class="font-label-sm text-white mb-6 uppercase">Programa</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#modelo-formativo">Modelo formativo</a></li>
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#pilares">Pilares</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <h5 class="font-label-sm text-white mb-6 uppercase">Contacto</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="#contacto">Conversemos</a></li>
+                    <li><a class="text-gray-400 hover:text-white transition-opacity duration-200" href="mailto:contacto@centromonteverde.cl">Correo institucional</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
