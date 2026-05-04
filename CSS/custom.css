@@ -297,3 +297,78 @@ footer a:hover {
         transform: translateY(0);
     }
 }
+
+/* =========================
+   Modo oscuro
+   ========================= */
+
+html.dark body {
+    background-color: #0b1220;
+    color: #e5e7eb;
+}
+
+html.dark section.bg-background {
+    background-color: #0f1720 !important;
+}
+
+html.dark section.bg-surface,
+html.dark section.bg-white {
+    background-color: #111827 !important;
+}
+
+html.dark section.bg-surface-container-low,
+html.dark section.bg-surface-container-highest {
+    background-color: #16202b !important;
+}
+
+html.dark .bg-primary {
+    background-color: #051a0f !important;
+}
+
+html.dark .bg-primary-container {
+    background-color: #13261c !important;
+}
+
+html.dark .bg-surface {
+    background-color: #111827 !important;
+}
+
+html.dark .bg-surface-container-low {
+    background-color: #16202b !important;
+}
+
+html.dark .bg-surface-container-highest {
+    background-color: #1b2633 !important;
+}
+
+html.dark .bg-white {
+    background-color: #111827 !important;
+}
+
+html.dark .text-primary {
+    color: #d7e8dc !important;
+}
+
+html.dark .text-on-surface,
+html.dark .text-on-background {
+    color: #e5e7eb !important;
+}
+
+html.dark .text-on-surface-variant,
+html.dark .text-gray-600,
+html.dark .text-gray-400 {
+    color: #cbd5e1 !important;
+}
+
+html.dark .border-outline-variant,
+html.dark .border-gray-200\/50,
+html.dark .border-surface-container,
+html.dark .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark .shadow-sm,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
