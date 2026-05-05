@@ -1,0 +1,533 @@
+/* =========================
+   Base general
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Compensa la altura del menú fijo al navegar con anclas */
+section[id] {
+    scroll-margin-top: 96px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+button {
+    transition: all 0.25s ease;
+}
+
+:focus-visible {
+    outline: 2px solid #c98140;
+    outline-offset: 3px;
+}
+
+/* =========================
+   Navegación
+   ========================= */
+
+header nav {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+/* Marca visual sutil para enlace activo si luego lo usas con JS */
+.nav-link-active {
+    color: #c98140 !important;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+#inicio h1 {
+    text-wrap: balance;
+}
+
+#inicio p {
+    text-wrap: pretty;
+}
+
+/* Oscurece un poco más el fondo si el texto del hero pierde contraste */
+#inicio .hero-overlay-soft {
+    background: linear-gradient(to bottom, rgba(5, 26, 15, 0.18), rgba(5, 26, 15, 0.42));
+}
+
+/* =========================
+   Contenido / legibilidad
+   ========================= */
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.max-readable {
+    max-width: 72ch;
+}
+
+/* Mejora cajas superpuestas sobre imágenes */
+.floating-card {
+    box-shadow: 0 18px 50px rgba(5, 26, 15, 0.10);
+}
+
+/* =========================
+   Secciones
+   ========================= */
+
+.section-narrow {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-kicker {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+/* =========================
+   Menú móvil
+   ========================= */
+
+#mobile-menu {
+    box-shadow: 0 18px 40px rgba(5, 26, 15, 0.08);
+}
+
+#mobile-menu a {
+    text-decoration: none;
+}
+
+#mobile-menu-button {
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    #mobile-menu {
+        animation: fadeSlideDown 0.2s ease;
+    }
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 1024px) {
+    #inicio {
+        min-height: 88vh;
+        height: auto;
+        padding-top: 7rem;
+        padding-bottom: 5rem;
+    }
+
+    #inicio h1 {
+        font-size: 56px !important;
+        line-height: 1.1 !important;
+    }
+
+    .py-section-padding {
+        padding-top: 96px !important;
+        padding-bottom: 96px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header nav {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        height: 72px !important;
+    }
+
+    section[id] {
+        scroll-margin-top: 84px;
+    }
+
+    #inicio {
+        min-height: 82vh;
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+
+    #inicio h1 {
+        font-size: 38px !important;
+        line-height: 1.12 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    #inicio p.font-body-lg {
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .py-section-padding {
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+    }
+
+    .font-headline-lg {
+        font-size: 34px !important;
+        line-height: 1.2 !important;
+    }
+
+    .font-headline-md {
+        font-size: 28px !important;
+        line-height: 1.25 !important;
+    }
+
+    .font-display-xl {
+        font-size: 38px !important;
+        line-height: 1.12 !important;
+    }
+
+    .px-12 {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    .gap-24 {
+        gap: 3rem !important;
+    }
+
+    .gap-12 {
+        gap: 2rem !important;
+    }
+
+    .max-w-4xl,
+    .max-w-5xl,
+    .max-w-7xl {
+        width: 100%;
+    }
+
+    /* Ajusta tarjeta superpuesta de la sección identidad */
+    #identidad .absolute.-bottom-8 {
+        position: relative !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    /* Evita que la tarjeta central se agrande demasiado en móvil */
+    #programa .scale-105 {
+        transform: none !important;
+    }
+
+    /* Impacto: separa mejor métricas */
+    #impacto .border-l {
+        border-left-width: 2px;
+        padding-left: 1rem !important;
+    }
+
+    /* CTA final */
+    #contacto .font-display-xl {
+        font-size: 34px !important;
+        line-height: 1.15 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #inicio h1 {
+        font-size: 32px !important;
+    }
+
+    .font-headline-lg {
+        font-size: 30px !important;
+    }
+
+    .font-headline-md {
+        font-size: 24px !important;
+    }
+
+    .py-section-padding {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .px-12 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* =========================
+   Modo oscuro global
+   ========================= */
+
+html.dark body {
+    background-color: #0b1220;
+    color: #e5e7eb;
+}
+
+html.dark section.bg-background {
+    background-color: #0f1720;
+}
+
+html.dark section.bg-surface,
+html.dark section.bg-white {
+    background-color: #111827;
+}
+
+html.dark section.bg-surface-container-low,
+html.dark section.bg-surface-container-highest {
+    background-color: #16202b;
+}
+
+html.dark .bg-primary {
+    background-color: #051a0f !important;
+}
+
+html.dark .bg-primary-container {
+    background-color: #13261c !important;
+}
+
+html.dark .bg-surface-container-low {
+    background-color: #16202b !important;
+}
+
+html.dark .bg-surface-container-highest {
+    background-color: #1b2633 !important;
+}
+
+html.dark .text-primary {
+    color: #d7e8dc !important;
+}
+
+html.dark .text-on-surface,
+html.dark .text-on-background {
+    color: #e5e7eb !important;
+}
+
+html.dark .text-on-surface-variant,
+html.dark .text-gray-600,
+html.dark .text-gray-400 {
+    color: #cbd5e1 !important;
+}
+
+html.dark .border-outline-variant,
+html.dark .border-gray-200\/50,
+html.dark .border-surface-container,
+html.dark .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark .shadow-sm,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* =========================
+   Dark mode específico: pilares
+   ========================= */
+
+html.dark #pilares .bg-white {
+    background-color: #101a22;
+}
+
+html.dark #pilares .bg-white:hover {
+    background-color: #051a0f;
+}
+
+html.dark #pilares h3.text-primary {
+    color: #e7efe9 !important;
+}
+
+html.dark #pilares p.text-on-surface-variant {
+    color: #c7d2de !important;
+}
+
+html.dark #pilares .bg-outline-variant {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark #pilares .border-outline-variant {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* =========================
+   Interacción unificada: modo claro + modo oscuro
+   Tarjetas: Identidad, Programa, Cómo funciona
+   ========================= */
+
+/* Base compartida de interacción */
+#identidad .bg-surface,
+#programa .bg-white,
+#como-funciona .bg-surface {
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+/* =========================
+   MODO CLARO
+   ========================= */
+
+/* Tarjeta flotante identidad */
+#identidad .bg-surface:hover {
+    background-color: #f5f7f8;
+    border-color: rgba(5, 26, 15, 0.18);
+    box-shadow: 0 14px 34px rgba(5, 26, 15, 0.08);
+    transform: translateY(-2px);
+}
+
+#identidad .bg-surface:hover p {
+    color: #334155;
+}
+
+/* Programa formativo */
+#programa .bg-white:hover {
+    background-color: #f5f7f8;
+    border-color: rgba(5, 26, 15, 0.18);
+    box-shadow: 0 14px 34px rgba(5, 26, 15, 0.08);
+    transform: translateY(-2px);
+}
+
+#programa .bg-white:hover h4,
+#programa .bg-white:hover .font-headline-md {
+    color: #051a0f;
+}
+
+#programa .bg-white:hover p {
+    color: #334155;
+}
+
+/* Cómo funciona */
+#como-funciona .bg-surface:hover {
+    background-color: #f5f7f8;
+    border-color: rgba(5, 26, 15, 0.18);
+    box-shadow: 0 14px 34px rgba(5, 26, 15, 0.08);
+    transform: translateY(-2px);
+}
+
+#como-funciona .bg-surface:hover h3,
+#como-funciona .bg-surface:hover .text-primary {
+    color: #051a0f;
+}
+
+#como-funciona .bg-surface:hover p {
+    color: #334155;
+}
+
+/* =========================
+   MODO OSCURO
+   ========================= */
+
+/* Tarjeta flotante identidad */
+html.dark #identidad .bg-surface {
+    background-color: #101a22;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+html.dark #identidad .bg-surface p,
+html.dark #identidad .bg-surface .text-on-surface,
+html.dark #identidad .bg-surface .text-on-surface-variant {
+    color: #d7dee8 !important;
+}
+
+html.dark #identidad .bg-surface:hover {
+    background-color: #13212c;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+}
+
+/* Programa formativo */
+html.dark #programa .bg-white {
+    background-color: #101a22;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark #programa .bg-white:hover {
+    background-color: #13212c;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+}
+
+html.dark #programa .material-symbols-outlined {
+    color: #c98140 !important;
+}
+
+html.dark #programa h4,
+html.dark #programa .font-headline-md {
+    color: #e7efe9 !important;
+}
+
+html.dark #programa p,
+html.dark #programa .text-on-surface-variant {
+    color: #c7d2de !important;
+}
+
+/* Cómo funciona */
+html.dark #como-funciona .bg-surface {
+    background-color: #101a22;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark #como-funciona .bg-surface:hover {
+    background-color: #13212c;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+}
+
+html.dark #como-funciona h3,
+html.dark #como-funciona .text-primary {
+    color: #e7efe9 !important;
+}
+
+html.dark #como-funciona p,
+html.dark #como-funciona .text-on-surface-variant {
+    color: #c7d2de !important;
+}
