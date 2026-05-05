@@ -92,14 +92,12 @@ p {
    Secciones
    ========================= */
 
-/* Evita que el contenido se vea demasiado apretado en pantallas medianas */
 .section-narrow {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Línea editorial sutil para subtítulos */
 .section-kicker {
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -115,6 +113,39 @@ footer a {
 
 footer a:hover {
     opacity: 1;
+}
+
+/* =========================
+   Menú móvil
+   ========================= */
+
+#mobile-menu {
+    box-shadow: 0 18px 40px rgba(5, 26, 15, 0.08);
+}
+
+#mobile-menu a {
+    text-decoration: none;
+}
+
+#mobile-menu-button {
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    #mobile-menu {
+        animation: fadeSlideDown 0.2s ease;
+    }
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================
@@ -266,40 +297,7 @@ footer a:hover {
 }
 
 /* =========================
-   Menú móvil
-   ========================= */
-
-#mobile-menu {
-    box-shadow: 0 18px 40px rgba(5, 26, 15, 0.08);
-}
-
-#mobile-menu a {
-    text-decoration: none;
-}
-
-#mobile-menu-button {
-    border-radius: 0.25rem;
-}
-
-@media (max-width: 768px) {
-    #mobile-menu {
-        animation: fadeSlideDown 0.2s ease;
-    }
-}
-
-@keyframes fadeSlideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================
-   Modo oscuro
+   Modo oscuro global
    ========================= */
 
 html.dark body {
@@ -308,17 +306,17 @@ html.dark body {
 }
 
 html.dark section.bg-background {
-    background-color: #0f1720 !important;
+    background-color: #0f1720;
 }
 
 html.dark section.bg-surface,
 html.dark section.bg-white {
-    background-color: #111827 !important;
+    background-color: #111827;
 }
 
 html.dark section.bg-surface-container-low,
 html.dark section.bg-surface-container-highest {
-    background-color: #16202b !important;
+    background-color: #16202b;
 }
 
 html.dark .bg-primary {
@@ -329,20 +327,12 @@ html.dark .bg-primary-container {
     background-color: #13261c !important;
 }
 
-html.dark .bg-surface {
-    background-color: #111827 !important;
-}
-
 html.dark .bg-surface-container-low {
     background-color: #16202b !important;
 }
 
 html.dark .bg-surface-container-highest {
     background-color: #1b2633 !important;
-}
-
-html.dark .bg-white {
-    background-color: #111827 !important;
 }
 
 html.dark .text-primary {
@@ -371,4 +361,173 @@ html.dark .shadow-sm,
 html.dark .shadow-xl,
 html.dark .shadow-2xl {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* =========================
+   Dark mode específico: pilares
+   ========================= */
+
+html.dark #pilares .bg-white {
+    background-color: #101a22;
+}
+
+html.dark #pilares .bg-white:hover {
+    background-color: #051a0f;
+}
+
+html.dark #pilares h3.text-primary {
+    color: #e7efe9 !important;
+}
+
+html.dark #pilares p.text-on-surface-variant {
+    color: #c7d2de !important;
+}
+
+html.dark #pilares .bg-outline-variant {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark #pilares .border-outline-variant {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* =========================
+   Interacción unificada: modo claro + modo oscuro
+   Tarjetas: Identidad, Programa, Cómo funciona
+   ========================= */
+
+/* Base compartida de interacción */
+#identidad .bg-surface,
+#programa .bg-white,
+#como-funciona .bg-surface {
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+/* =========================
+   MODO CLARO
+   ========================= */
+
+/* Tarjeta flotante identidad */
+#identidad .bg-surface:hover {
+    background-color: #f5f7f8;
+    border-color: rgba(5, 26, 15, 0.18);
+    box-shadow: 0 14px 34px rgba(5, 26, 15, 0.08);
+    transform: translateY(-2px);
+}
+
+#identidad .bg-surface:hover p {
+    color: #334155;
+}
+
+/* Programa formativo */
+#programa .bg-white:hover {
+    background-color: #f5f7f8;
+    border-color: rgba(5, 26, 15, 0.18);
+    box-shadow: 0 14px 34px rgba(5, 26, 15, 0.08);
+    transform: translateY(-2px);
+}
+
+#programa .bg-white:hover h4,
+#programa .bg-white:hover .font-headline-md {
+    color: #051a0f;
+}
+
+#programa .bg-white:hover p {
+    color: #334155;
+}
+
+/* Cómo funciona */
+#como-funciona .bg-surface:hover {
+    background-color: #f5f7f8;
+    border-color: rgba(5, 26, 15, 0.18);
+    box-shadow: 0 14px 34px rgba(5, 26, 15, 0.08);
+    transform: translateY(-2px);
+}
+
+#como-funciona .bg-surface:hover h3,
+#como-funciona .bg-surface:hover .text-primary {
+    color: #051a0f;
+}
+
+#como-funciona .bg-surface:hover p {
+    color: #334155;
+}
+
+/* =========================
+   MODO OSCURO
+   ========================= */
+
+/* Tarjeta flotante identidad */
+html.dark #identidad .bg-surface {
+    background-color: #101a22;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+html.dark #identidad .bg-surface p,
+html.dark #identidad .bg-surface .text-on-surface,
+html.dark #identidad .bg-surface .text-on-surface-variant {
+    color: #d7dee8 !important;
+}
+
+html.dark #identidad .bg-surface:hover {
+    background-color: #13212c;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+}
+
+/* Programa formativo */
+html.dark #programa .bg-white {
+    background-color: #101a22;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark #programa .bg-white:hover {
+    background-color: #13212c;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+}
+
+html.dark #programa .material-symbols-outlined {
+    color: #c98140 !important;
+}
+
+html.dark #programa h4,
+html.dark #programa .font-headline-md {
+    color: #e7efe9 !important;
+}
+
+html.dark #programa p,
+html.dark #programa .text-on-surface-variant {
+    color: #c7d2de !important;
+}
+
+/* Cómo funciona */
+html.dark #como-funciona .bg-surface {
+    background-color: #101a22;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark #como-funciona .bg-surface:hover {
+    background-color: #13212c;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+}
+
+html.dark #como-funciona h3,
+html.dark #como-funciona .text-primary {
+    color: #e7efe9 !important;
+}
+
+html.dark #como-funciona p,
+html.dark #como-funciona .text-on-surface-variant {
+    color: #c7d2de !important;
 }
